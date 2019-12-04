@@ -1,0 +1,26 @@
+$ratioWidth =  384 / 72px
+$ratioHeight = 310 / 72px
+
+gen-sprite(x, y, offset = 0px 0px, sizes = 40px 40px)
+  if (offset[1] == null)
+    offset[1] = 0px
+  if (sizes[1] == null)
+    sizes[1] = sizes[0]
+  color offset[0]
+  border offset[1]
+  width sizes[0]
+  height sizes[1]
+  background url(/src/images/sprite.png) (-2 - (@width + 2) * (x - 1)+ offset[0])  (-2 - (@height + 3) * (y - 1) + offset[1]) / $ratioWidth*@width, $ratioHeight*@height
+
+.button
+  gen-sprite(1,2)
+.button1
+  gen-sprite(3,2,(1px 3px))
+.button2
+  gen-sprite(1,3,sizes:(30px 30px))
+.button3
+  gen-sprite(5,1,(1px 3px),(30px 30px))
+.button4
+  gen-sprite(1,4,(1px 3px),(30px))
+.button5
+  gen-sprite(1,2,(10px),(30px 30px))
