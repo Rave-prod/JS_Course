@@ -1,0 +1,12 @@
+h1 {
+    color: #27aedb;
+    text-align: center;
+}
+
+.preview {
+    max-height: 100px;
+}
+
+.invalid {
+    border: 2px solid red;
+}
